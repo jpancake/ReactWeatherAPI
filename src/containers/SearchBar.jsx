@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { fetchWeather } from '../actions/index'
 
-class SearchBar extends Component {
+export class SearchBar extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -30,6 +30,7 @@ class SearchBar extends Component {
             className="form-control"
             value={this.state.term}
             onChange={this._onInputChange}
+            type="search"
           />
           <span className="input-group-btn">
             <button type="submit" className="btn btn-secondary">Submit</button>
